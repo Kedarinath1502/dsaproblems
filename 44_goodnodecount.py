@@ -12,7 +12,7 @@ class Solution:
             if root.val >= val:
                 self.count += 1
             dfs(root.left, max(root.val, val))
-            dfs(root.right, max(root.val, val ))
+            dfs(root.right, max(root.val, val))
         dfs(root, min(root.val, float('-inf')))
         return self.count
     
