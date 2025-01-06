@@ -15,7 +15,7 @@ class Solution:
                 curr = curr.right
             else:
                 return curr
-
+'''
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if not root:
@@ -26,3 +26,4 @@ class Solution:
             return self.lowestCommonAncestor(root.right, p, q)
         else:
             return root
+'''
