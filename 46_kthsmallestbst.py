@@ -17,5 +17,3 @@ class Solution:
         inorder_traverse(root)
         return result
     
-'''
-another solution'''
