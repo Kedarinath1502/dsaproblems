@@ -11,8 +11,12 @@ trie (i.e., was inserted before), and false otherwise.
 boolean startsWith(String prefix) Returns true if there is a previously 
 inserted string word that has the prefix prefix, and false otherwise.
 '''
-class Trie:
+class TrieNode():
+    def __init__(self):
+        self.children = {} 
+        self.is_end = False    
 
+class Trie:
     def __init__(self):
         self.root = TrieNode()
 
@@ -23,7 +27,7 @@ class Trie:
                 node.children[char] = TrieNode()
             node = node.children[char]
         node.is_end = True
-
+    
     def search(self, word: str) -> bool:
         node = self.root
         for char in word:
@@ -31,7 +35,7 @@ class Trie:
                 return False
             node = node.children[char]
         return node.is_end
-
+    
     def startsWith(self, prefix: str) -> bool:
         node = self.root
         for char in prefix:
@@ -40,10 +44,6 @@ class Trie:
             node = node.children[char]
         return True
 
-class TrieNode():
-    def __init__(self):
-        self.children = {} 
-        self.is_end = False    
 
 
 # Your Trie object will be instantiated and called as such:

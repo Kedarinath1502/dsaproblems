@@ -14,6 +14,13 @@ def containsDuplicates(nums):
 
 print(containsDuplicates(nums))
 
+def containsDuplicates(nums):
+    mp = {}
+    for ele in nums:
+        if ele in mp:
+            return True
+        mp[ele] = 1 + mp.get(ele, 0)
+    return False
 
 # hashset = set()
 # for n in nums:

@@ -2,7 +2,7 @@
 Given a binary tree root, a node X in the tree is named good if in the path from root to X 
 there are no nodes with a value greater than X.
 Return the number of good nodes in the binary tree.'''
-
+'''
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         self.count = 0
@@ -15,6 +15,7 @@ class Solution:
             dfs(root.right, max(root.val, val))
         dfs(root, min(root.val, float('-inf')))
         return self.count
+'''
     
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
